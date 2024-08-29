@@ -1,5 +1,4 @@
 <?php
-// include('../includes/db_connect.php');
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -17,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['role'] = $user['role'];
 
             if ($user['role'] == 'admin') {
-                header('Location: ../admin/dashboard.php');
+                header('Location: dashboard.php');
             } else {
                 header('Location: search_books.php');
             }
@@ -36,10 +35,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" style.css">
 </head>
 <body>
-    <?php include('../includes/header.php'); ?>
+    <?php include('header.php'); ?>
 
     <main>
         <h2>Login</h2>
@@ -52,6 +51,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </form>
     </main>
 
-    <?php include('../includes/footer.php'); ?>
+    <?php include('footer.php'); ?>
 </body>
 </html>
