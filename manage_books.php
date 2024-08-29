@@ -1,9 +1,8 @@
 <?php
-// include('../includes/db_connect.php');
 session_start();
 
 if ($_SESSION['role'] != 'admin') {
-    header('Location: ../user/login.php');
+    header('Location: login.php');
     exit();
 }
 
@@ -38,10 +37,10 @@ $books = $conn->query("SELECT * FROM books");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage Books</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <?php include('../includes/header.php'); ?>
+    <?php include('header.php'); ?>
 
     <main>
         <h2>Manage Books</h2>
@@ -81,6 +80,6 @@ $books = $conn->query("SELECT * FROM books");
         </table>
     </main>
 
-    <?php include('../includes/footer.php'); ?>
+    <?php include('footer.php'); ?>
 </body>
 </html>
