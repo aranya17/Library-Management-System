@@ -3,7 +3,7 @@
 session_start();
 
 if ($_SESSION['role'] != 'admin') {
-    header('Location: ../user/login.php');
+    header('Location: login.php');
     exit();
 }
 
@@ -32,10 +32,10 @@ $users = $conn->query("SELECT * FROM users WHERE role='member'");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Issue Book</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href=style.css">
 </head>
 <body>
-    <?php include('../includes/header.php'); ?>
+    <?php include('header.php'); ?>
 
     <main>
         <h2>Issue Book</h2>
@@ -56,6 +56,6 @@ $users = $conn->query("SELECT * FROM users WHERE role='member'");
         </form>
     </main>
 
-    <?php include('../includes/footer.php'); ?>
+    <?php include('footer.php'); ?>
 </body>
 </html>
