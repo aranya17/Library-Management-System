@@ -1,5 +1,4 @@
 <?php
-// include('../includes/db_connect.php');
 session_start();
 
 if ($_SESSION['role'] != 'admin') {
