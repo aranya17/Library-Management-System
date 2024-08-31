@@ -1,5 +1,4 @@
 <?php
-// include('../includes/db_connect.php');
 session_start();
 
 if ($_SESSION['role'] != 'member') {
@@ -21,10 +20,10 @@ $books = $conn->query("SELECT * FROM books WHERE title LIKE '%$search_query%' OR
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Books</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <?php include('../includes/header.php'); ?>
+    <?php include('header.php'); ?>
 
     <main>
         <h2>Search Books</h2>
@@ -56,6 +55,6 @@ $books = $conn->query("SELECT * FROM books WHERE title LIKE '%$search_query%' OR
         </table>
     </main>
 
-    <?php include('../includes/footer.php'); ?>
+    <?php include('footer.php'); ?>
 </body>
 </html>
