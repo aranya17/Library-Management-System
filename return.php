@@ -1,9 +1,8 @@
 <?php
-// include('../includes/db_connect.php');
 session_start();
 
 if ($_SESSION['role'] != 'admin') {
-    header('Location: ../user/login.php');
+    header('Location: login.php');
     exit();
 }
 
@@ -35,10 +34,10 @@ $issued_books = $conn->query("SELECT issued_books.id, books.title, users.usernam
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Return Book</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <?php include('../includes/header.php'); ?>
+    <?php include('header.php'); ?>
 
     <main>
         <h2>Return Book</h2>
@@ -53,6 +52,6 @@ $issued_books = $conn->query("SELECT issued_books.id, books.title, users.usernam
         </form>
     </main>
 
-    <?php include('../includes/footer.php'); ?>
+    <?php include('footer.php'); ?>
 </body>
 </html>
